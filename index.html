@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://1arecruitment.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The 1A Recruitment logo over a black and white photo of an aircraft window seat above the clouds">
+<meta property="og:image:alt" content="The 1A Recruitment logo in white on black">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="1A Recruitment | Your next hire trained at 40,000 feet">
 <meta name="twitter:description" content="We place former international cabin crew into corporate roles. Remote, hybrid and UK.">
@@ -32,7 +32,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:wght@300;400&display=swap">
-<link rel="preload" as="image" href="img/cabin-1600.webp" imagesrcset="img/cabin-900.webp 900w, img/cabin-1600.webp 1600w" imagesizes="(min-width: 1100px) 1000px, 90vw" type="image/webp">
 
 <script type="application/ld+json">
 {
@@ -144,18 +143,12 @@ button{font:inherit;color:inherit}
 .door p{color:var(--muted);max-width:30ch;font-size:.98rem}
 .door .btn{margin-top:10px}
 @media (max-width:640px){.doors{grid-template-columns:1fr}.door + .door{border-left:0;border-top:1px solid var(--line)}.door .btn{width:100%}}
-.frame{max-width:1000px;margin:clamp(88px,11vw,152px) auto 0;padding:clamp(8px,1.2vw,14px);border:1px solid var(--line)}
-.frame img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 45%}
-.frame figcaption{padding:14px 2px 2px;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--faint);text-align:center}
-@media (max-width:640px){.frame img{aspect-ratio:4/5;object-position:66% center}}
 
 /* ---------- Who we are ---------- */
-.who{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,8vw,120px);align-items:center}
-.who-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:28% center}
-.who-copy{display:grid;gap:26px;justify-items:start}
+.who{max-width:640px;margin:0 auto;text-align:center}
+.who-copy{display:grid;gap:26px;justify-items:center}
 .who-copy .lede + .lede{margin-top:-6px}
 .who-copy .closing{font-family:var(--serif);font-size:clamp(1.25rem,1.8vw,1.5rem);line-height:1.4;color:var(--fg)}
-@media (max-width:860px){.who{grid-template-columns:minmax(0,1fr)}.who-img{order:2}.who-img img{aspect-ratio:3/2}}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(80px,10vw,136px);text-align:center}
 .stat{display:grid;gap:10px;padding:8px 16px}
 .stat + .stat{border-left:1px solid var(--line)}
@@ -322,13 +315,6 @@ details[open] > summary .sign::after{transform:rotate(0)}
         <a class="btn" href="#crew">I&rsquo;m ex-crew</a>
       </div>
     </div>
-    <figure class="frame reveal">
-      <picture>
-        <source type="image/webp" srcset="img/cabin-900.webp 900w, img/cabin-1600.webp 1600w" sizes="(min-width: 1100px) 1000px, 90vw">
-        <img src="img/cabin-1600.jpg" srcset="img/cabin-900.jpg 900w, img/cabin-1600.jpg 1600w" sizes="(min-width: 1100px) 1000px, 90vw" width="1600" height="900" fetchpriority="high" alt="Black and white photo of a first-class window seat, with the sun setting over a sea of clouds outside the window.">
-      </picture>
-      <figcaption>Seat 1A</figcaption>
-    </figure>
   </div>
 </header>
 
@@ -338,12 +324,6 @@ details[open] > summary .sign::after{transform:rotate(0)}
   <section class="section" id="who" aria-labelledby="who-title">
     <div class="wrap">
       <div class="who">
-        <figure class="who-img reveal">
-          <picture>
-            <source type="image/webp" srcset="img/boardroom-700.webp 700w, img/boardroom-1200.webp 1200w" sizes="(min-width: 860px) 42vw, 90vw">
-            <img src="img/boardroom-1200.jpg" srcset="img/boardroom-700.jpg 700w, img/boardroom-1200.jpg 1200w" sizes="(min-width: 860px) 42vw, 90vw" width="1200" height="751" loading="lazy" decoding="async" alt="Black and white photo of an empty boardroom at golden hour, with leather chairs along a polished marble table.">
-          </picture>
-        </figure>
         <div class="who-copy reveal">
           <span class="label">Who we are</span>
           <h2 id="who-title">Seat 1A is the first seat on the aircraft.</h2>

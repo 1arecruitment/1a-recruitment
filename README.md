@@ -5,7 +5,7 @@ A plain static site for [1arecruitment.com](https://1arecruitment.com), served b
 ## Files
 
 - `index.html`: the whole page, including its styles and a little JavaScript.
-- `img/`: optimised black and white photos (JPEG and WebP at two sizes), the logo files and the LinkedIn preview image (`og-image.jpg`, 1200 × 630).
+- `img/`: the logo files and the LinkedIn preview image (`og-image.jpg`, 1200 × 630, the logo on black).
 - `favicon.ico`, `apple-touch-icon.png`, `img/favicon-32.png`, `img/icon-192.png`: icons made from the 1A mark.
 - `CNAME`: keeps the custom domain. Do not delete it.
 - `robots.txt` and `sitemap.xml`: help search engines find the page.
