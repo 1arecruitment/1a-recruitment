@@ -191,7 +191,8 @@ details[open] > summary .sign::after{transform:rotate(0)}
 .story[open] .when-open{display:inline}
 .story[open] .when-closed{display:none}
 .story-body{display:grid;gap:18px;margin-top:40px;text-align:left;color:var(--muted)}
-.story-body p:last-child{color:var(--fg)}
+.story-body p:nth-last-child(2){color:var(--fg)}
+.story-body .signoff{font-family:var(--serif);font-size:1.1rem;color:var(--fg)}
 
 /* ---------- Talent ---------- */
 .profiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
@@ -213,13 +214,6 @@ details[open] > summary .sign::after{transform:rotate(0)}
 @media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:56px}}
 @media (max-width:520px){.steps{grid-template-columns:minmax(0,1fr)}}
 
-/* ---------- Pricing ---------- */
-.price{max-width:720px;margin:0 auto;border:1px solid var(--line-2);padding:clamp(48px,7vw,88px) clamp(24px,5vw,72px);display:grid;justify-items:center;text-align:center;gap:22px}
-.price h2{max-width:18ch}
-.price .lede{max-width:40ch}
-.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;margin-block:10px 14px;border-top:1px solid var(--line);padding-top:26px;width:100%;max-width:440px}
-.terms li{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-@media (max-width:480px){.terms{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- For former crew ---------- */
 .crew{background:var(--bg);padding-block:var(--section)}
@@ -278,7 +272,6 @@ details[open] > summary .sign::after{transform:rotate(0)}
     <div class="nav-links">
       <a href="#roles">Roles</a>
       <a href="#talent">Talent</a>
-      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </div>
     <a class="brand" href="#top"><img src="img/mark-white.png" width="160" height="152" alt="1A Recruitment, home"></a>
@@ -291,7 +284,6 @@ details[open] > summary .sign::after{transform:rotate(0)}
     <ul class="wrap">
       <li><a href="#roles">Roles</a></li>
       <li><a href="#talent">Talent</a></li>
-      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#crew">For former crew</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -391,10 +383,11 @@ details[open] > summary .sign::after{transform:rotate(0)}
         <details class="story">
           <summary><span class="when-closed">Read the founder story</span><span class="when-open">Close the founder story</span><span class="sign" aria-hidden="true"></span></summary>
           <div class="story-body">
-            <p>I&rsquo;m Amy Byrne. I started my career in recruitment as a consultant in technology staffing, then spent three years flying as cabin crew. Since then I&rsquo;ve made the move from the cabin back into a corporate career myself.</p>
+            <p>I started my career in recruitment as a consultant in technology staffing, then spent three years flying as cabin crew. Since then I&rsquo;ve made the move from the cabin back into a corporate career myself.</p>
             <p>On every flight I worked alongside people who had already built careers before flying: lawyers, nurses, teachers, people from tech and gaming. Flying gave them even more: calm under pressure, cultural fluency and a service instinct you can&rsquo;t train in an office.</p>
             <p>Yet almost all of us had the same worry. We knew we had the skills, but we didn&rsquo;t know how to get back into a corporate role, or how to show employers that our experience in the air translates to the office.</p>
             <p>1A Recruitment brings both sides together. I&rsquo;ve sat in both seats. Every candidate you meet has been interviewed by someone who has done the job.</p>
+            <p class="signoff">&ndash; Amy Byrne, the founder</p>
           </div>
         </details>
       </div>
@@ -449,26 +442,9 @@ details[open] > summary .sign::after{transform:rotate(0)}
     </div>
   </section>
 
-  <!-- 9. Pricing -->
-  <section class="section light" id="pricing" aria-labelledby="pricing-title">
-    <div class="wrap">
-      <div class="price reveal">
-        <span class="label">Pricing</span>
-        <h2 id="pricing-title">Fees agreed with you, role by&nbsp;role.</h2>
-        <p class="lede">Every brief is different, so we agree our fee with you before we start.</p>
-        <ul class="terms">
-          <li>No upfront costs</li>
-          <li>No retainers</li>
-          <li>90-day guarantee</li>
-          <li>Candidates never pay</li>
-        </ul>
-        <a class="btn btn-fill" href="#contact" data-book>Book a free call</a>
-      </div>
-    </div>
-  </section>
 
   <!-- For former crew (the crew path) -->
-  <section class="crew" id="crew" aria-labelledby="crew-title">
+  <section class="crew light" id="crew" aria-labelledby="crew-title">
     <div class="wrap crew-grid">
       <div class="crew-copy reveal">
         <span class="label">For former cabin crew</span>
@@ -490,7 +466,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
   </section>
 
   <!-- 10. FAQ -->
-  <section class="section light" id="faq" aria-labelledby="faq-title">
+  <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
       <div class="head reveal">
         <span class="label">FAQ</span>
@@ -529,7 +505,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
   </section>
 
   <!-- 11. Closing call to action -->
-  <section class="final" id="contact" aria-labelledby="contact-title">
+  <section class="final light" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
       <div class="final-inner reveal">
         <span class="label">Get in touch</span>
