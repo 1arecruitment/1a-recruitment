@@ -1,6 +1,6 @@
 # 1A Recruitment website
 
-A plain static site for [1arecruitment.com](https://1arecruitment.com), served by GitHub Pages. There is no build step: edit the files and push.
+A plain static site for [1a-recruitment.com](https://1a-recruitment.com), served by GitHub Pages. There is no build step: edit the files and push.
 
 ## Files
 
@@ -22,4 +22,4 @@ Every "Book a call" button will then open that link in a new tab. While it is em
 
 ## Checking the LinkedIn preview
 
-After publishing, paste `https://1arecruitment.com` into LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/) to refresh the cached preview.
+After publishing, paste `https://1a-recruitment.com` into LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/) to refresh the cached preview.

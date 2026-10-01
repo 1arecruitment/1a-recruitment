@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://1arecruitment.com/sitemap.xml
+Sitemap: https://1a-recruitment.com/sitemap.xml
