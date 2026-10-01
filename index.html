@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>1A Recruitment | Former cabin crew for corporate roles</title>
-<meta name="description" content="Boutique recruitment consultancy placing former international cabin crew into customer success, executive assistance, client relations and remote operations roles. Remote, hybrid and UK. Pay only when you hire.">
+<title>1A Recruitment | Former cabin crew for remote roles</title>
+<meta name="description" content="Boutique recruitment consultancy placing former international cabin crew into remote roles with companies worldwide: customer success, executive assistance, client relations and operations. Hybrid and UK roles too. Pay only when you hire.">
 <link rel="canonical" href="https://1arecruitment.com/">
 <meta name="theme-color" content="#0b0b0b">
 <meta name="color-scheme" content="dark">
@@ -15,14 +15,14 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://1arecruitment.com/">
 <meta property="og:title" content="1A Recruitment | Your next hire trained at 40,000 feet">
-<meta property="og:description" content="We place former international cabin crew into corporate roles. Remote, hybrid and UK. 15% fee, paid only when your hire signs.">
+<meta property="og:description" content="We place former international cabin crew into remote roles with companies worldwide. Hybrid and UK roles too. 15% fee, paid only when your hire signs.">
 <meta property="og:image" content="https://1arecruitment.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The 1A Recruitment logo in white on black">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="1A Recruitment | Your next hire trained at 40,000 feet">
-<meta name="twitter:description" content="We place former international cabin crew into corporate roles. Remote, hybrid and UK.">
+<meta name="twitter:description" content="We place former international cabin crew into remote roles with companies worldwide. Hybrid and UK roles too.">
 <meta name="twitter:image" content="https://1arecruitment.com/img/og-image.jpg">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -43,7 +43,7 @@
   "image": "https://1arecruitment.com/img/og-image.jpg",
   "email": "hello@1arecruitment.com",
   "foundingDate": "2026",
-  "description": "Independent UK recruitment consultancy placing former international cabin crew into corporate roles.",
+  "description": "Independent UK recruitment consultancy placing former international cabin crew into remote roles with companies worldwide, plus hybrid and UK roles.",
   "address": { "@type": "PostalAddress", "addressCountry": "GB" }
 }
 </script>
@@ -65,7 +65,7 @@
   --serif:"Gilda Display","Didot","Bodoni 72","Times New Roman",serif;
   --sans:"Jost","Futura","Century Gothic","Helvetica Neue",Arial,sans-serif;
   --gutter:clamp(20px,5vw,64px);
-  --section:clamp(112px,14vw,200px);
+  --section:clamp(96px,11vw,160px);
   --nav-h:76px;
 }
 
@@ -92,7 +92,10 @@ button{font:inherit;color:inherit}
 
 .wrap{max-width:calc(1160px + 2 * var(--gutter));margin:0 auto;padding-inline:var(--gutter)}
 .narrow{max-width:calc(680px + 2 * var(--gutter))}
-.section{padding-block:var(--section) 0}
+.section{padding-block:var(--section)}
+/* Soft white sections that alternate with black */
+.light{--bg:#f4f4f4;--bg-2:#eaeaea;--fg:#0b0b0b;--muted:#4f4f4f;--faint:#666;--line:#d4d4d4;--line-2:#a8a8a8;background:var(--bg);color:var(--fg)}
+.light ::selection{background:var(--fg);color:var(--bg)}
 .center{text-align:center}
 
 /* Small spaced labels, like "ESTD. 2026" in the logo */
@@ -133,7 +136,7 @@ button{font:inherit;color:inherit}
 @media (min-width:821px){.menu-panel{display:none!important}}
 
 /* ---------- Hero ---------- */
-.hero{padding-top:clamp(80px,12vw,168px);text-align:center}
+.hero{padding-block:clamp(80px,12vw,168px) var(--section);text-align:center}
 .hero-copy{display:grid;justify-items:center;gap:28px;max-width:760px;margin:0 auto}
 .hero h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.12}
 .hero .lede{font-size:clamp(1rem,1.3vw,1.1rem)}
@@ -149,7 +152,7 @@ button{font:inherit;color:inherit}
 .who-copy{display:grid;gap:26px;justify-items:center}
 .who-copy .lede + .lede{margin-top:-6px}
 .who-copy .closing{font-family:var(--serif);font-size:clamp(1.25rem,1.8vw,1.5rem);line-height:1.4;color:var(--fg)}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(80px,10vw,136px);text-align:center}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(64px,8vw,104px);text-align:center}
 .stat{display:grid;gap:10px;padding:8px 16px}
 .stat + .stat{border-left:1px solid var(--line)}
 .stat b{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.4vw,3.4rem);line-height:1}
@@ -219,7 +222,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
 @media (max-width:480px){.terms{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- For former crew ---------- */
-.crew{background:var(--bg-2);margin-top:var(--section);padding-block:clamp(96px,12vw,168px)}
+.crew{background:var(--bg);padding-block:var(--section)}
 .crew-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(48px,8vw,120px);align-items:start}
 .crew-copy{display:grid;gap:26px;justify-items:start}
 .crew-copy h2{font-size:clamp(2rem,3.6vw,2.9rem)}
@@ -299,14 +302,14 @@ details[open] > summary .sign::after{transform:rotate(0)}
 <header class="hero" id="top">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="label">Boutique recruitment &middot; Estd. 2026</span>
+      <span class="label">Remote roles &middot; Boutique recruitment</span>
       <h1>Your next hire trained at 40,000&nbsp;feet.</h1>
-      <p class="lede">We place former international cabin crew into corporate roles. Remote or hybrid with companies worldwide, or in the&nbsp;UK.</p>
+      <p class="lede">We place former international cabin crew into remote roles with companies worldwide. Hybrid and UK-based roles&nbsp;too.</p>
     </div>
     <div class="doors">
       <div class="door">
         <span class="label">I&rsquo;m hiring</span>
-        <p>Meet composed, client-ready people who have served at the highest standard.</p>
+        <p>Meet composed, client-ready people for your remote team.</p>
         <a class="btn btn-fill" href="#contact" data-book>Book a free call</a>
       </div>
       <div class="door">
@@ -321,7 +324,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
 <main id="main">
 
   <!-- 3. Who we are -->
-  <section class="section" id="who" aria-labelledby="who-title">
+  <section class="section light" id="who" aria-labelledby="who-title">
     <div class="wrap">
       <div class="who">
         <div class="who-copy reveal">
@@ -353,18 +356,19 @@ details[open] > summary .sign::after{transform:rotate(0)}
       <div class="qualities reveal">
         <div class="quality"><h3>Composure</h3><p>Crew requalify every year in safety, first aid and emergency procedures. A difficult client or a missed deadline doesn&rsquo;t rattle them.</p></div>
         <div class="quality"><h3>Premium service</h3><p>Many have served First and Business Class guests and VIPs. Discretion and attention to detail are second nature.</p></div>
-        <div class="quality"><h3>Global and adaptable</h3><p>They&rsquo;ve worked with dozens of nationalities, often in several languages, across shifting time zones. And they join a brand-new crew on almost every flight.</p></div>
+        <div class="quality"><h3>Made for remote teams</h3><p>They&rsquo;ve worked with dozens of nationalities, often in several languages, across shifting time zones. And they join a brand-new crew on almost every flight.</p></div>
         <div class="quality"><h3>Careers before flying</h3><p>Many worked in fields like law, nursing, teaching, hospitality, retail and tech before they flew.</p></div>
       </div>
     </div>
   </section>
 
   <!-- 5. What we do -->
-  <section class="section" id="roles" aria-labelledby="roles-title">
+  <section class="section light" id="roles" aria-labelledby="roles-title">
     <div class="wrap">
       <div class="head reveal">
         <span class="label">What we do</span>
-        <h2 id="roles-title">Four roles where ex-crew excel.</h2>
+        <h2 id="roles-title">Four remote roles where ex-crew excel.</h2>
+        <p class="lede">Remote first, with companies worldwide. Hybrid roles too, and UK-based roles for crew with a UK background.</p>
       </div>
       <div class="roles reveal">
         <article class="role"><h3>Customer Success &amp; Account Management</h3><p>Onboarding, retention and renewals for SaaS, fintech and service businesses.</p></article>
@@ -372,7 +376,6 @@ details[open] > summary .sign::after{transform:rotate(0)}
         <article class="role"><h3>VIP &amp; Client Relations</h3><p>Concierge, luxury travel, private aviation and high-net-worth client service.</p></article>
         <article class="role"><h3>Remote Operations</h3><p>Coordination, scheduling, onboarding and support in remote-first teams.</p></article>
       </div>
-      <p class="roles-note reveal">Remote or hybrid with companies worldwide, or in the UK for crew with a UK background.</p>
     </div>
   </section>
 
@@ -399,7 +402,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
   </section>
 
   <!-- 7. Talent pool -->
-  <section class="section" id="talent" aria-labelledby="talent-title">
+  <section class="section light" id="talent" aria-labelledby="talent-title">
     <div class="wrap">
       <div class="head reveal">
         <span class="label">Talent pool</span>
@@ -447,7 +450,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
   </section>
 
   <!-- 9. Pricing -->
-  <section class="section" id="pricing" aria-labelledby="pricing-title">
+  <section class="section light" id="pricing" aria-labelledby="pricing-title">
     <div class="wrap">
       <div class="price reveal">
         <span class="label">Pricing</span>
@@ -481,14 +484,14 @@ details[open] > summary .sign::after{transform:rotate(0)}
         <li><b>Always free</b><span>Joining costs nothing, and you never pay to be placed.</span></li>
         <li><b>Interviewed by someone who has flown</b><span>The founder has made the same move from the cabin to a corporate career.</span></li>
         <li><b>Roles that suit you</b><span>Customer success, executive assistance, VIP and client relations, and remote operations.</span></li>
-        <li><b>Remote, hybrid or UK</b><span>Remote or hybrid roles with companies worldwide, or UK roles if you have a UK background.</span></li>
+        <li><b>Remote first</b><span>We lead with remote roles with companies worldwide. Hybrid roles too, and UK roles if you have a UK background.</span></li>
         <li><b>Your details stay private</b><span>We never share them with an employer without your permission.</span></li>
       </ul>
     </div>
   </section>
 
   <!-- 10. FAQ -->
-  <section class="section" id="faq" aria-labelledby="faq-title">
+  <section class="section light" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
       <div class="head reveal">
         <span class="label">FAQ</span>
@@ -513,7 +516,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
         </details>
         <details>
           <summary>Which roles do you cover?<span class="sign" aria-hidden="true"></span></summary>
-          <div class="answer"><p>Customer success and account management, executive and personal assistance, VIP and client relations, and remote operations. Roles can be remote or hybrid with companies worldwide, or in the UK for crew with a UK background.</p><p>If you have a client-facing role that isn&rsquo;t listed, ask us.</p></div>
+          <div class="answer"><p>Customer success and account management, executive and personal assistance, VIP and client relations, and remote operations. We lead with remote roles with companies worldwide. We also place hybrid roles, and UK-based roles for crew with a UK background.</p><p>If you have a client-facing role that isn&rsquo;t listed, ask us.</p></div>
         </details>
         <details id="crew-faq">
           <summary>I&rsquo;m former cabin crew. How do I join?<span class="sign" aria-hidden="true"></span></summary>
@@ -549,7 +552,7 @@ details[open] > summary .sign::after{transform:rotate(0)}
 <footer class="footer">
   <div class="wrap foot">
     <img class="logo" src="img/logo-white.png" width="700" height="458" alt="1A Recruitment, established 2026">
-    <p>A boutique recruitment consultancy placing former international cabin crew into corporate roles: remote, hybrid and in the UK.</p>
+    <p>A boutique recruitment consultancy placing former international cabin crew into remote roles with companies worldwide, plus hybrid and UK roles.</p>
     <div class="foot-meta">
       <span>&copy; 2026 1A Recruitment. Independent UK recruitment consultancy. Not affiliated with any airline.</span>
       <a href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a>
