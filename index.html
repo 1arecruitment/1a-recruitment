@@ -6,8 +6,8 @@
 <title>1A Recruitment | Former cabin crew for corporate roles</title>
 <meta name="description" content="Boutique recruitment consultancy placing former international cabin crew into customer success, executive assistance, client relations and remote operations roles. Remote, hybrid and UK. Pay only when you hire.">
 <link rel="canonical" href="https://1arecruitment.com/">
-<meta name="theme-color" content="#0a0a0a">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#f3f3f3">
+<meta name="color-scheme" content="light">
 
 <!-- Open Graph (LinkedIn, Facebook, Slack) -->
 <meta property="og:type" content="website">
@@ -50,244 +50,278 @@
 </script>
 
 <style>
-/* ---------- Tokens: strictly black, white and greys ---------- */
+/* =====================================================================
+   1A Recruitment — print-editorial layout
+   Paper (light grey) and ink (black) sections, oversized Gilda Display
+   headlines, Jost labels, running heads and column rules.
+   Strictly black, white and greys.
+   ===================================================================== */
 :root{
-  --black:#0a0a0a;
-  --ink:#111111;
-  --ink-2:#171717;
-  --white:#f5f5f5;
-  --grey:#a8a8a8;      /* body copy on black: 8:1 contrast */
-  --grey-2:#8c8c8c;    /* small labels: 5.8:1 contrast */
-  --line:#262626;
-  --line-2:#3d3d3d;
+  --paper:#f3f3f3;
+  --paper-2:#e7e7e7;
+  --ink:#0a0a0a;
+  --ink-2:#161616;
   --serif:"Gilda Display","Didot","Bodoni 72","Times New Roman",serif;
   --sans:"Jost","Futura","Century Gothic","Helvetica Neue",Arial,sans-serif;
-  --wrap:1180px;
-  --gutter:clamp(16px,5vw,56px);
-  --section:clamp(96px,12vw,168px);
-  --nav-h:68px;
+  --wrap:1240px;
+  --gutter:clamp(16px,4.5vw,56px);
+  --gap:clamp(16px,2.4vw,32px);
+  --section:clamp(88px,11vw,160px);
+  --nav-h:64px;
 }
+.light  {--bg:var(--paper);  --fg:var(--ink);   --muted:#4f4f4f; --hair:#c4c4c4; background:var(--bg);color:var(--fg)}
+.light-2{--bg:var(--paper-2);--fg:var(--ink);   --muted:#4a4a4a; --hair:#bdbdbd; background:var(--bg);color:var(--fg)}
+.dark   {--bg:var(--ink);    --fg:var(--paper); --muted:#ababab; --hair:#363636; background:var(--bg);color:var(--fg)}
 
 /* ---------- Base ---------- */
 *,*::before,*::after{box-sizing:border-box;font-style:normal}
-html{font-synthesis:none;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{font-synthesis:none;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}
 p{margin:0}
-h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.1;letter-spacing:-.005em;text-wrap:balance}
-h2{font-size:clamp(2rem,4.2vw,3.25rem)}
-h3{font-size:clamp(1.3rem,2vw,1.55rem);line-height:1.2}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.1;text-wrap:balance}
 ul,ol,dl,dd,figure,blockquote{margin:0;padding:0}
 ul,ol{list-style:none}
 button{font:inherit;color:inherit}
-:focus{outline:none}
-:focus-visible{outline:2px solid var(--white);outline-offset:4px}
-::selection{background:var(--white);color:var(--black)}
 [hidden]{display:none!important}
-.nowrap{white-space:nowrap}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--fg,var(--ink));outline-offset:4px}
+::selection{background:var(--ink);color:var(--paper)}
+.dark ::selection{background:var(--paper);color:var(--ink)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.skip{position:absolute;left:16px;top:-100px;z-index:100;background:var(--white);color:var(--black);padding:12px 18px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.nowrap{white-space:nowrap}
+.skip{position:absolute;left:16px;top:-100px;z-index:100;background:var(--ink);color:var(--paper);padding:12px 18px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
 .skip:focus{top:12px}
 
 .wrap{max-width:calc(var(--wrap) + 2 * var(--gutter));margin:0 auto;padding-inline:var(--gutter)}
-.section{padding-block:var(--section) 0}
-.section > .wrap{position:relative;padding-top:clamp(40px,5vw,64px)}
-.section > .wrap::before{content:"";position:absolute;top:0;left:var(--gutter);right:var(--gutter);height:1px;background:var(--line)}
+.section{padding-block:clamp(28px,3vw,40px) var(--section)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
 
-/* Small uppercase labels (Jost, like "ESTD. 2026") */
-.label{display:inline-flex;align-items:center;gap:14px;font-size:.72rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--grey-2)}
-.label::before{content:"";width:28px;height:1px;background:currentColor}
-.label.plain::before{display:none}
-.lede{color:var(--grey);max-width:56ch;font-size:clamp(1rem,1.3vw,1.1rem)}
+/* Display type: uppercase Gilda, echoing the RECRUITMENT. wordmark */
+.display{font-family:var(--serif);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.98;font-size:clamp(2.1rem,6vw,5.6rem)}
+.display.xl{font-size:clamp(2rem,9.6vw,7.4rem);line-height:.94}
+.kicker{font-size:.72rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.6;color:var(--muted);max-width:52ch}
+.body-copy{color:var(--muted);max-width:60ch}
 
-/* Editorial section heading: label column + heading column */
-.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px clamp(24px,5vw,72px);margin-bottom:clamp(48px,6vw,88px)}
-.sec-head .label{align-self:start;padding-top:.9em}
-.sec-head-body{display:grid;gap:22px}
-@media (max-width:860px){.sec-head{grid-template-columns:minmax(0,1fr)}.sec-head .label{padding-top:0}}
+/* Running head, like the top of a magazine page */
+.runhead{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:14px;border-top:1px solid var(--fg);border-bottom:1px solid var(--hair);font-size:.68rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase;margin-bottom:clamp(48px,7vw,104px)}
+.runhead span:nth-child(2){text-align:center}
+.runhead span:last-child{text-align:right;color:var(--muted)}
+@media (max-width:600px){.runhead{grid-template-columns:auto 1fr}.runhead span:last-child{display:none}.runhead span:nth-child(2){text-align:right}}
 
-/* Buttons: square, hairline, restrained */
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border:1px solid var(--white);font-family:var(--sans);font-size:.74rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color .3s ease,color .3s ease,border-color .3s ease}
-.btn-solid{background:var(--white);color:var(--black)}
-.btn-solid:hover{background:transparent;color:var(--white)}
-.btn-line{background:transparent;color:var(--white);border-color:var(--line-2)}
-.btn-line:hover{border-color:var(--white);background:var(--white);color:var(--black)}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 30px;border:1px solid var(--fg);font-family:var(--sans);font-size:.74rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color .3s ease,color .3s ease}
+.btn-solid{background:var(--fg);color:var(--bg)}
+.btn-solid:hover{background:transparent;color:var(--fg)}
+.btn-line{background:transparent;color:var(--fg)}
+.btn-line:hover{background:var(--fg);color:var(--bg)}
 .btn-sm{min-height:40px;padding:0 18px;font-size:.68rem}
+.arrow{font-family:var(--sans);font-weight:300;letter-spacing:0}
 
 /* ---------- Navigation ---------- */
-.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--nav-h)}
-.brand{display:flex;align-items:center;flex:none}
-.brand img{height:34px;width:auto}
-.nav-links{display:flex;align-items:center;gap:clamp(22px,3vw,40px);margin-left:auto;margin-right:clamp(8px,2vw,24px)}
-.nav-links a:not(.btn){font-size:.72rem;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color .3s}
-.nav-links a:not(.btn):hover{color:var(--white)}
-.nav-actions{display:flex;align-items:center;gap:12px}
-.menu-btn{display:none;background:none;border:0;padding:10px 4px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;color:var(--white)}
-.menu-panel{display:none}
+.nav{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--ink)}
+.nav-bar{display:flex;align-items:center;gap:24px;height:var(--nav-h)}
+.brand img{height:32px;width:auto}
+.nav-links{display:flex;align-items:center;gap:clamp(20px,3vw,40px);margin-left:auto}
+.nav-links a{font-size:.7rem;font-weight:400;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;padding-block:6px;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s}
+.nav-links a:hover{background-size:100% 1px}
+.nav-actions{display:flex;align-items:center;gap:14px;margin-left:clamp(8px,2vw,24px)}
+.menu-btn{display:none;background:none;border:0;padding:10px 2px;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;cursor:pointer}
 @media (max-width:820px){
   .nav-links{display:none}
+  .nav-actions{margin-left:auto}
   .menu-btn{display:block}
-  .menu-panel{border-top:1px solid var(--line)}
-  .menu-panel:not([hidden]){display:block}
-  .menu-panel ul{display:grid;padding-block:8px 16px}
-  .menu-panel a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--grey)}
+  .menu-panel{border-top:1px solid var(--hair)}
+  .menu-panel ul{padding-block:4px 12px}
+  .menu-panel a{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--hair);font-family:var(--serif);font-size:1.5rem;text-transform:uppercase;text-decoration:none}
   .menu-panel li:last-child a{border-bottom:0}
+  .menu-panel a span{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;color:var(--muted);align-self:center}
 }
+@media (min-width:821px){.menu-panel{display:none!important}}
 
-/* ---------- Hero ---------- */
-.hero{padding-top:clamp(72px,11vw,150px);text-align:center}
-.hero-copy{display:grid;justify-items:center;gap:28px;max-width:940px;margin:0 auto}
-.hero h1{font-size:clamp(2.55rem,7.2vw,5.75rem);line-height:1.03}
-.hero .lede{max-width:52ch}
-.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:8px}
-.frame{margin-top:clamp(56px,8vw,104px);border:1px solid var(--line-2);padding:clamp(8px,1.2vw,14px)}
-.frame img{width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center 45%}
-.frame figcaption{display:flex;justify-content:space-between;gap:16px;padding:14px 4px 2px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--grey-2);text-align:left}
-@media (max-width:640px){
-  .frame img{aspect-ratio:4/5;object-position:66% center}
-  .hero-actions .btn{flex:1 1 220px}
-}
+/* ---------- Hero: a magazine cover ---------- */
+.hero{padding-top:clamp(20px,2.4vw,28px)}
+.coverline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--ink);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;padding-bottom:14px}
+.coverline span:nth-child(2){text-align:center}
+.coverline span:last-child{text-align:right}
+@media (max-width:600px){.coverline{grid-template-columns:1fr 1fr}.coverline span:nth-child(2){display:none}}
+.hero-head{text-align:center;padding-block:clamp(48px,7vw,96px) clamp(36px,4vw,56px)}
+.hero h1{margin-inline:auto}
+.hero-sub{display:grid;justify-items:center;gap:30px;text-align:center}
+.hero-sub .lede{color:var(--muted);max-width:50ch}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+@media (max-width:520px){.hero-actions .btn{flex:1 1 100%}}
+.frame{margin-top:clamp(48px,7vw,88px);border:1px solid var(--ink);padding:clamp(8px,1.2vw,16px);background:var(--paper)}
+.frame img{width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center 45%;filter:contrast(1.04)}
+.frame figcaption{display:flex;justify-content:space-between;gap:16px;padding:14px 2px 2px;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:640px){.frame img{aspect-ratio:4/5;object-position:66% center}.frame figcaption span:last-child{display:none}}
 
-/* ---------- Who we are ---------- */
-.who{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,7vw,104px);align-items:end}
-.who-copy{display:grid;gap:28px}
-.who-copy .lede + .lede{margin-top:-8px}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,32px);margin-top:20px}
-.stat{border-top:1px solid var(--line-2);padding-top:20px;display:grid;gap:8px;align-content:start}
-.stat b{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.4vw,3.5rem);line-height:1;font-variant-numeric:lining-nums}
-.stat span{font-size:.9rem;line-height:1.45;color:var(--grey)}
-.source{font-size:.78rem;letter-spacing:.06em;color:var(--grey-2)}
-.who-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:28% center}
-@media (max-width:900px){.who{grid-template-columns:minmax(0,1fr)}.who-img img{aspect-ratio:3/2}}
-@media (max-width:520px){.stats{grid-template-columns:minmax(0,1fr);gap:0}.stat{grid-template-columns:5.5rem minmax(0,1fr);align-items:baseline;padding-block:18px}}
+/* ---------- 02 Who we are ---------- */
+.who-top{align-items:start;row-gap:48px}
+.who-text{grid-column:1 / span 7;display:grid;gap:32px;align-content:start}
+.who-img{grid-column:9 / span 4}
+.who-img img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:28% center}
+.who-img figcaption{margin-top:12px;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.dropcap{color:var(--fg);font-size:clamp(1.05rem,1.4vw,1.18rem);line-height:1.7;max-width:56ch}
+.dropcap::first-letter{float:left;font-family:var(--serif);font-size:5.4em;line-height:.78;padding:.08em .12em 0 0}
+.pull{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.2;border-top:1px solid var(--hair);padding-top:24px;max-width:22ch}
+@media (max-width:900px){.who-text,.who-img{grid-column:1 / -1}.who-img img{aspect-ratio:3/2}}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(64px,8vw,120px);border-top:1px solid var(--fg)}
+.stat{padding:24px clamp(16px,2.4vw,32px) 0;border-left:1px solid var(--hair);display:grid;gap:10px;align-content:start}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,9vw,8.5rem);line-height:.9;letter-spacing:-.01em}
+.stat span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);line-height:1.6}
+.source{margin-top:28px;font-size:.78rem;color:var(--muted)}
+@media (max-width:640px){.stats{grid-template-columns:minmax(0,1fr)}.stat{border-left:0;padding:22px 0;border-bottom:1px solid var(--hair)}}
 
-/* ---------- Comparison ---------- */
-.compare{width:100%;border-collapse:collapse;table-layout:fixed}
-.compare th,.compare td{text-align:left;vertical-align:top;padding:26px clamp(16px,2.4vw,32px);border-top:1px solid var(--line)}
-.compare thead th,.compare thead td{border-top:0;padding-top:22px;padding-bottom:22px;font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.2}
-.compare thead th:first-child{width:22%}
-.compare th[scope=row]{font-family:var(--sans);font-weight:400;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey-2);padding-top:31px;padding-left:0}
-.compare td{color:var(--grey-2)}
-.compare .ex{color:var(--white);background:var(--ink)}
-.compare thead .ex{background:var(--ink)}
-.compare tbody tr:last-child td,.compare tbody tr:last-child th{border-bottom:1px solid var(--line)}
+/* ---------- 03 Why ex-crew: a two-page spread ---------- */
+.why-head{display:grid;gap:28px;margin-bottom:clamp(48px,6vw,80px)}
+.why-head .lede{justify-self:end;max-width:44ch}
+@media (max-width:760px){.why-head .lede{justify-self:start}}
+.spread{width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid var(--ink)}
+.spread th,.spread td{text-align:left;vertical-align:top;padding:24px clamp(16px,2.4vw,36px)}
+.spread thead th{font-family:var(--serif);font-weight:400;text-transform:uppercase;font-size:clamp(1.4rem,2.8vw,2.4rem);line-height:1;padding-block:clamp(28px,3.4vw,44px)}
+.spread .col-label{width:18%}
+.spread .typ{background:var(--paper-2);color:#4a4a4a}
+.spread .ex{background:var(--ink);color:var(--paper)}
+.spread tbody th{font-weight:400;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;padding-top:29px;border-top:1px solid #c4c4c4}
+.spread tbody .typ{border-top:1px solid #c9c9c9}
+.spread tbody .ex{border-top:1px solid #333}
+.spread tbody td{font-size:1rem}
+.spread tbody td.ex{font-size:1.04rem}
+.spread thead .k{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.26em;margin-bottom:14px;opacity:.75}
 @media (max-width:760px){
-  .compare,.compare tbody,.compare tr,.compare th,.compare td{display:block;width:100%}
-  .compare thead{display:none}
-  .compare tbody tr{border-top:1px solid var(--line-2);padding-block:26px}
-  .compare tbody tr:last-child{border-bottom:1px solid var(--line-2)}
-  .compare th,.compare td,.compare tbody tr:last-child td,.compare tbody tr:last-child th{border:0}
-  .compare th[scope=row]{padding:0 0 14px}
-  .compare td{padding:14px 0 0}
-  .compare td::before{content:attr(data-label);display:block;font-family:var(--serif);font-size:1.05rem;color:var(--grey);margin-bottom:4px}
-  .compare tbody td.ex{background:var(--ink);padding:16px 18px;margin-top:14px}
-  .compare td.ex::before{color:var(--white)}
+  .spread,.spread tbody,.spread tr,.spread th,.spread td{display:block;width:100%}
+  .spread{border:0}
+  .spread thead{display:none}
+  .spread tbody tr{border-top:1px solid var(--ink);padding-top:16px;margin-bottom:28px}
+  .spread tbody th{border:0;padding:0 0 12px}
+  .spread tbody td{border:0!important;padding:16px 18px}
+  .spread td::before{content:attr(data-label);display:block;font-family:var(--serif);text-transform:uppercase;font-size:.95rem;letter-spacing:.04em;margin-bottom:6px;opacity:.8}
 }
 
-/* ---------- Roles ---------- */
-.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,5vw,72px)}
-.role{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:4px 16px;padding-block:clamp(28px,3.4vw,40px);border-top:1px solid var(--line)}
-.role .num{font-family:var(--serif);font-size:1rem;color:var(--grey-2);padding-top:.25em}
-.role h3{grid-column:2}
-.role p{grid-column:2;color:var(--grey);margin-top:10px;max-width:42ch}
-.roles-note{margin-top:clamp(28px,3vw,40px);padding-top:24px;border-top:1px solid var(--line);color:var(--grey);font-size:.95rem}
-@media (max-width:760px){.roles{grid-template-columns:minmax(0,1fr)}.role{grid-template-columns:2.4rem minmax(0,1fr)}}
+/* ---------- 04 Roles: a contents page ---------- */
+.roles-grid{align-items:start}
+.roles-intro{grid-column:1 / span 4;display:grid;gap:28px;position:sticky;top:calc(var(--nav-h) + 40px)}
+.contents{grid-column:6 / span 7;border-top:1px solid var(--ink)}
+.contents li{display:grid;grid-template-columns:clamp(64px,8vw,120px) minmax(0,1fr);gap:8px clamp(16px,2vw,28px);padding-block:clamp(24px,3vw,36px);border-bottom:1px solid var(--hair)}
+.contents .num{grid-row:span 2;font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.4rem);line-height:.85}
+.contents h3{font-size:clamp(1.35rem,2.2vw,1.9rem);text-transform:uppercase;letter-spacing:.01em;line-height:1.08}
+.contents p{grid-column:2;color:var(--muted);max-width:44ch}
+@media (max-width:900px){.roles-intro,.contents{grid-column:1 / -1;position:static}.contents{margin-top:48px}}
 
-/* ---------- Founder ---------- */
-.founder{padding-block:var(--section) 0}
-.founder-inner{background:var(--ink);border:1px solid var(--line);padding:clamp(48px,8vw,112px) clamp(20px,6vw,96px);display:grid;justify-items:center;text-align:center;gap:32px}
-.founder-inner .mark{width:56px;opacity:.9}
-.founder blockquote p{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.7rem);line-height:1.25;max-width:26ch;margin-inline:auto;text-wrap:balance}
-.founder cite{display:block;margin-top:28px;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--grey-2)}
-.story{width:100%;max-width:640px;text-align:left;border-top:1px solid var(--line-2)}
-.story summary{display:flex;justify-content:center;align-items:center;gap:14px;padding-top:24px;font-size:.74rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;list-style:none}
+/* ---------- 05 Founder ---------- */
+.founder-grid{row-gap:40px}
+.quote-mark{grid-column:1 / span 2;font-family:var(--serif);font-size:clamp(7rem,16vw,15rem);line-height:.7;color:#5c5c5c;user-select:none}
+.founder blockquote{grid-column:3 / -1}
+.founder blockquote p{font-family:var(--serif);font-size:clamp(1.9rem,4.4vw,3.9rem);line-height:1.12;max-width:20ch}
+.byline{grid-column:3 / -1;display:flex;align-items:center;gap:18px;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.byline img{width:40px}
+.story{grid-column:3 / -1;border-top:1px solid var(--hair)}
+.story summary{display:inline-flex;align-items:center;gap:16px;padding:22px 0;font-size:.74rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;list-style:none}
 .story summary::-webkit-details-marker{display:none}
-.story summary .sign{position:relative;width:11px;height:11px}
-.story summary .sign::before,.story summary .sign::after{content:"";position:absolute;left:0;top:5px;width:11px;height:1px;background:currentColor;transition:transform .3s}
-.story summary .sign::after{transform:rotate(90deg)}
-.story[open] summary .sign::after{transform:rotate(0)}
+.sign{position:relative;width:12px;height:12px;flex:none}
+.sign::before,.sign::after{content:"";position:absolute;left:0;top:6px;width:12px;height:1px;background:currentColor;transition:transform .3s}
+.sign::after{transform:rotate(90deg)}
+details[open] > summary .sign::after{transform:rotate(0)}
 .story .when-open{display:none}
 .story[open] .when-open{display:inline}
 .story[open] .when-closed{display:none}
-.story-body{display:grid;gap:18px;padding-top:28px;color:var(--grey)}
-.story-body p:last-child{color:var(--white)}
+.story-body{column-count:2;column-gap:clamp(24px,4vw,56px);column-rule:1px solid var(--hair);padding-bottom:12px;color:var(--muted)}
+.story-body p{margin-bottom:1em;break-inside:avoid-column}
+.story-body p:first-child::first-letter{float:left;font-family:var(--serif);font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--fg)}
+.story-body p:last-child{color:var(--fg)}
+@media (max-width:760px){.quote-mark{grid-column:1 / -1;font-size:6rem;margin-bottom:-24px}.founder blockquote,.byline,.story{grid-column:1 / -1}.story-body{column-count:1}}
 
-/* ---------- Talent ---------- */
-.profiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
-.pax{border:1px solid var(--line);padding:clamp(24px,2.6vw,32px);display:grid;gap:22px;align-content:start}
-.pax-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-.tag{font-size:.64rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--line-2);padding:5px 10px;color:var(--grey)}
-.avail{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-2)}
-.pax h3{font-size:1.45rem}
-.pax dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 20px;font-size:.95rem;border-top:1px solid var(--line);padding-top:20px}
-.pax dt{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey-2);padding-top:.45em}
-.note{margin-top:28px;font-size:.86rem;color:var(--grey-2)}
-@media (max-width:960px){.profiles{grid-template-columns:minmax(0,1fr)}}
+/* ---------- 06 Talent: classified columns ---------- */
+.talent-head{align-items:end;row-gap:28px;margin-bottom:clamp(48px,6vw,80px)}
+.talent-head h2{grid-column:1 / span 7}
+.talent-head .lede{grid-column:9 / span 4}
+@media (max-width:900px){.talent-head h2,.talent-head .lede{grid-column:1 / -1}}
+.profiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.pax{padding:0 clamp(16px,2.4vw,32px) 32px;border-left:1px solid var(--hair);display:grid;gap:20px;align-content:start}
+.pax:first-child{border-left:0;padding-left:0}
+.pax:last-child{padding-right:0}
+.stamp{justify-self:start;background:var(--ink);color:var(--paper);font-size:.62rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;padding:7px 12px}
+.pax h3{font-size:clamp(1.5rem,2.4vw,2rem);text-transform:uppercase;letter-spacing:.01em;line-height:1.05;margin-top:24px}
+.pax .avail{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:-8px}
+.pax dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 20px;font-size:.96rem}
+.pax dt,.pax dd{padding-block:10px;border-top:1px solid var(--hair)}
+.pax dt{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding-top:14px}
+.note{margin-top:24px;font-size:.84rem;color:var(--muted)}
+@media (max-width:900px){.profiles{grid-template-columns:minmax(0,1fr);border-bottom:0}.pax{border-left:0;padding:0 0 36px;border-bottom:1px solid var(--ink)}.pax + .pax{padding-top:4px}}
 
-/* ---------- Process ---------- */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,40px)}
-.steps li{border-top:1px solid var(--line-2);padding-top:24px;display:grid;gap:12px;align-content:start}
-.steps .num{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.25rem);line-height:1;color:var(--grey-2)}
-.steps p{color:var(--grey);font-size:.98rem}
-@media (max-width:960px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}}
-@media (max-width:520px){.steps{grid-template-columns:minmax(0,1fr);row-gap:36px}}
+/* ---------- 07 Process ---------- */
+.process-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-bottom:clamp(48px,6vw,80px)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--fg)}
+.steps li{padding:28px clamp(16px,2vw,28px) 0;border-left:1px solid var(--hair);display:grid;gap:14px;align-content:start}
+.steps li:first-child{border-left:0;padding-left:0}
+.steps .num{font-family:var(--serif);font-size:clamp(4rem,8vw,7.5rem);line-height:.82}
+.steps h3{font-size:1.3rem;text-transform:uppercase;letter-spacing:.04em;margin-top:12px}
+.steps p{color:var(--muted);font-size:.98rem}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}.steps li:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:520px){.steps{grid-template-columns:minmax(0,1fr);row-gap:0}.steps li{border-left:0;padding:24px 0 28px;border-bottom:1px solid var(--hair);grid-template-columns:auto minmax(0,1fr);column-gap:20px}.steps .num{grid-row:span 2;font-size:3.6rem}.steps h3{margin-top:0}.steps p{grid-column:2}}
 
-/* ---------- Pricing ---------- */
-.price{border:1px solid var(--line-2);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-.price-main{padding:clamp(32px,5vw,64px);display:grid;gap:18px;align-content:center;border-right:1px solid var(--line)}
-.price-fig{font-family:var(--serif);font-size:clamp(5.5rem,13vw,9.5rem);line-height:.85;letter-spacing:-.02em}
-.price-fig span{font-size:.45em;color:var(--grey);margin-left:4px}
-.price-main p{color:var(--grey);max-width:30ch}
-.price-main .price-fig{color:var(--white);max-width:none}
-.price-main .btn{justify-self:start;margin-top:10px}
-.price-list{padding:clamp(16px,3vw,40px) clamp(24px,5vw,64px);display:grid;align-content:center}
-.price-list li{padding-block:20px;border-top:1px solid var(--line);display:grid;gap:4px}
-.price-list li:first-child{border-top:0}
-.price-list b{font-weight:400}
-.price-list span{color:var(--grey);font-size:.94rem}
-@media (max-width:760px){.price{grid-template-columns:minmax(0,1fr)}.price-main{border-right:0;border-bottom:1px solid var(--line)}}
+/* ---------- 08 Pricing ---------- */
+.price-grid{align-items:end;row-gap:40px}
+.price-fig{grid-column:1 / span 7;font-family:var(--serif);font-size:clamp(9rem,30vw,25rem);line-height:.74;letter-spacing:-.03em;margin-left:-.04em}
+.price-fig span{font-size:.38em;letter-spacing:0;vertical-align:top;margin-left:.04em;position:relative;top:.06em}
+.price-side{grid-column:8 / -1;display:grid;gap:28px}
+.price-side .display{font-size:clamp(1.9rem,3.6vw,3rem)}
+.price-side .lede{color:var(--fg)}
+.price-list{border-top:1px solid var(--fg)}
+.price-list li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:16px;padding-block:16px;border-bottom:1px solid var(--hair)}
+.price-list b{font-weight:400;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;padding-top:.3em}
+.price-list span{color:var(--muted);font-size:.96rem}
+.price-side .btn{justify-self:start}
+@media (max-width:900px){.price-fig,.price-side{grid-column:1 / -1}}
+@media (max-width:480px){.price-list li{grid-template-columns:minmax(0,1fr);gap:4px}}
 
-/* ---------- FAQ ---------- */
-.faq{border-bottom:1px solid var(--line)}
-.faq details{border-top:1px solid var(--line)}
-.faq summary{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:26px;cursor:pointer;list-style:none;font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.3}
+/* ---------- 09 FAQ ---------- */
+.faq-grid{align-items:start;row-gap:40px}
+.faq-intro{grid-column:1 / span 4;position:sticky;top:calc(var(--nav-h) + 40px);display:grid;gap:24px}
+.faq{grid-column:6 / span 7;border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--hair)}
+.faq summary{display:grid;grid-template-columns:3.2rem minmax(0,1fr) auto;align-items:baseline;gap:12px;padding-block:24px;cursor:pointer;list-style:none}
 .faq summary::-webkit-details-marker{display:none}
-.faq .sign{flex:none;position:relative;width:14px;height:14px}
-.faq .sign::before,.faq .sign::after{content:"";position:absolute;left:0;top:7px;width:14px;height:1px;background:var(--white);transition:transform .3s}
-.faq .sign::after{transform:rotate(90deg)}
-.faq details[open] .sign::after{transform:rotate(0)}
-.faq .answer{display:grid;gap:14px;padding:0 48px 30px 0;color:var(--grey);max-width:68ch}
-@media (max-width:600px){.faq .answer{padding-right:0}}
+.faq .q-num{font-size:.68rem;letter-spacing:.2em;color:var(--muted)}
+.faq .q{font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.45rem);line-height:1.3}
+.faq .sign{align-self:center}
+.faq .answer{display:grid;gap:14px;padding:0 40px 28px 3.95rem;color:var(--muted);max-width:66ch}
+@media (max-width:900px){.faq-intro,.faq{grid-column:1 / -1;position:static}}
+@media (max-width:520px){.faq summary{grid-template-columns:2.4rem minmax(0,1fr) auto}.faq .answer{padding:0 0 26px 3.15rem}}
 
-/* ---------- Closing CTA ---------- */
-.final{padding-block:var(--section)}
-.final-inner{border:1px solid var(--line-2);padding:clamp(56px,9vw,120px) clamp(20px,5vw,72px);display:grid;justify-items:center;text-align:center;gap:28px}
-.final h2{font-size:clamp(2.3rem,5.4vw,4.25rem)}
-.audiences{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,4vw,56px);max-width:760px;width:100%;text-align:left;margin-top:8px}
-.audiences div{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px}
-.audiences b{font-weight:400;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--grey-2)}
-.audiences p{color:var(--grey)}
-@media (max-width:640px){.audiences{grid-template-columns:minmax(0,1fr)}}
-.email-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 20px;margin-top:12px}
-.email{font-family:var(--serif);font-size:clamp(1.35rem,3.4vw,2.25rem);text-decoration:none;border-bottom:1px solid var(--line-2);padding-bottom:4px;overflow-wrap:anywhere;transition:border-color .3s}
-.email:hover{border-color:var(--white)}
-.reply{font-size:.86rem;color:var(--grey-2)}
+/* ---------- 10 Closing call to action ---------- */
+.final{padding-block:clamp(28px,3vw,40px) clamp(72px,9vw,128px)}
+.final-head{text-align:center;padding-block:clamp(24px,4vw,56px) clamp(48px,6vw,80px)}
+.final-head h2{max-width:14ch;margin-inline:auto}
+.audiences{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--fg);border-bottom:1px solid var(--hair)}
+.audiences div{padding:26px clamp(16px,3vw,40px) 30px;display:grid;gap:10px}
+.audiences div + div{border-left:1px solid var(--hair)}
+.audiences div:first-child{padding-left:0}
+.audiences b{font-weight:400;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase}
+.audiences p{color:var(--muted);max-width:40ch}
+@media (max-width:640px){.audiences{grid-template-columns:minmax(0,1fr)}.audiences div{padding-inline:0}.audiences div + div{border-left:0;border-top:1px solid var(--hair)}}
+.email-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 24px;margin-top:clamp(48px,6vw,72px);text-align:center}
+.email{font-family:var(--serif);font-size:clamp(1.5rem,4.6vw,3.4rem);line-height:1.1;text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:6px;overflow-wrap:anywhere;transition:border-color .3s}
+.email:hover{border-color:var(--fg)}
+.reply{margin-top:20px;text-align:center;font-size:.86rem;color:var(--muted)}
 
 /* ---------- Footer ---------- */
-.footer{border-top:1px solid var(--line);padding-block:56px 40px;color:var(--grey);font-size:.88rem}
-.foot{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px clamp(32px,6vw,88px);align-items:center}
-.foot .logo{width:150px}
-.foot-meta{grid-column:1 / -1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;border-top:1px solid var(--line);padding-top:24px;font-size:.78rem;color:var(--grey-2)}
+.footer{padding-block:0 40px;font-size:.86rem}
+.foot{display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px clamp(32px,6vw,96px);align-items:end;border-top:1px solid var(--fg);padding-top:48px}
+.foot .logo{width:170px}
+.foot p{color:var(--muted);max-width:52ch;justify-self:end;text-align:right}
+.foot-meta{grid-column:1 / -1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;border-top:1px solid var(--hair);padding-top:22px;font-size:.76rem;color:var(--muted)}
 .foot-meta a{text-decoration:none}
 .foot-meta a:hover{text-decoration:underline}
-@media (max-width:640px){.foot{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.foot{grid-template-columns:minmax(0,1fr)}.foot p{justify-self:start;text-align:left}}
 
-/* ---------- Gentle reveal (only with JS, never with reduced motion) ---------- */
-.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s ease}
+/* ---------- Gentle reveal (JS only; off for reduced motion) ---------- */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s ease}
 .js .reveal.in{opacity:1;transform:none}
-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
@@ -298,9 +332,10 @@ button{font:inherit;color:inherit}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<nav class="nav" aria-label="Main">
+<!-- 1. Navigation -->
+<nav class="nav light" aria-label="Main">
   <div class="wrap nav-bar">
-    <a class="brand" href="#top"><img src="img/mark-white.png" width="160" height="152" alt="1A Recruitment, home"></a>
+    <a class="brand" href="#top"><img src="img/mark-black.png" width="160" height="152" alt="1A Recruitment, home"></a>
     <div class="nav-links">
       <a href="#roles">Roles</a>
       <a href="#talent">Talent</a>
@@ -314,100 +349,104 @@ button{font:inherit;color:inherit}
   </div>
   <div class="menu-panel" id="menu" hidden>
     <ul class="wrap">
-      <li><a href="#roles">Roles</a></li>
-      <li><a href="#talent">Talent</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#roles">Roles <span>04</span></a></li>
+      <li><a href="#talent">Talent <span>06</span></a></li>
+      <li><a href="#pricing">Pricing <span>08</span></a></li>
+      <li><a href="#faq">FAQ <span>09</span></a></li>
     </ul>
   </div>
 </nav>
 
-<header class="hero" id="top">
+<!-- 2. Hero -->
+<header class="hero light" id="top">
   <div class="wrap">
-    <div class="hero-copy">
-      <span class="label plain">Boutique recruitment &middot; Estd. 2026</span>
-      <h1>Your next hire trained at 40,000&nbsp;feet.</h1>
+    <div class="coverline"><span>No. 01</span><span>Boutique recruitment</span><span>Estd. 2026</span></div>
+    <div class="hero-head">
+      <h1 class="display xl">Your next hire trained at 40,000&nbsp;feet.</h1>
+    </div>
+    <div class="hero-sub">
       <p class="lede">We place former international cabin crew into corporate roles. Remote or hybrid with companies worldwide, or in the UK.</p>
       <div class="hero-actions">
         <a class="btn btn-solid" href="#contact" data-book>Book a free call</a>
-        <a class="btn btn-line" href="#crew" data-open="crew">I'm ex-crew</a>
+        <a class="btn btn-line" href="#crew" data-open="crew">I'm ex-crew <span class="arrow" aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
     <figure class="frame">
       <picture>
-        <source type="image/webp" srcset="img/cabin-900.webp 900w, img/cabin-1600.webp 1600w" sizes="(min-width: 1260px) 1180px, 92vw">
-        <img src="img/cabin-1600.jpg" srcset="img/cabin-900.jpg 900w, img/cabin-1600.jpg 1600w" sizes="(min-width: 1260px) 1180px, 92vw" width="1600" height="900" fetchpriority="high" alt="Black and white photo of a first-class window seat, with the sun setting over a sea of clouds outside the window.">
+        <source type="image/webp" srcset="img/cabin-900.webp 900w, img/cabin-1600.webp 1600w" sizes="(min-width: 1360px) 1240px, 92vw">
+        <img src="img/cabin-1600.jpg" srcset="img/cabin-900.jpg 900w, img/cabin-1600.jpg 1600w" sizes="(min-width: 1360px) 1240px, 92vw" width="1600" height="900" fetchpriority="high" alt="Black and white photo of a first-class window seat, with the sun setting over a sea of clouds outside the window.">
       </picture>
-      <figcaption><span>Seat 1A</span><span>The first seat on the aircraft</span></figcaption>
+      <figcaption><span>Seat 1A. The first seat on the aircraft.</span><span>Fig. 01</span></figcaption>
     </figure>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- Who we are -->
-  <section class="section" id="who" aria-labelledby="who-title">
-    <div class="wrap who">
-      <div class="who-copy reveal">
-        <span class="label">Who we are</span>
-        <h2 id="who-title">Boutique recruitment, held to a <span class="nowrap">first-class</span> standard.</h2>
-        <p class="lede">Seat 1A is the first seat on the aircraft, in First Class. It stands for the highest standard of service. The crew who look after that seat are some of the most composed, discreet and service-minded people you will ever hire.</p>
-        <p class="lede">We help them find their next seat on the ground.</p>
-        <div class="stats">
-          <div class="stat"><b>20+</b><span>languages spoken</span></div>
-          <div class="stat"><b>58%</b><span>have flown for 5+&nbsp;years</span></div>
-          <div class="stat"><b>85%</b><span>ready to start within two months</span></div>
+  <!-- 3. Who we are -->
+  <section class="section dark" id="who" aria-labelledby="who-title">
+    <div class="wrap">
+      <div class="runhead"><span>No. 02</span><span>Who we are</span><span>1A Recruitment</span></div>
+      <div class="grid who-top">
+        <div class="who-text reveal">
+          <h2 class="display" id="who-title">The first seat on the aircraft.</h2>
+          <p class="dropcap">Seat 1A is the first seat on the aircraft, in First Class. It stands for the highest standard of service. The crew who look after that seat are some of the most composed, discreet and service-minded people you will ever hire. 1A Recruitment is a boutique, independent recruitment consultancy built around them.</p>
+          <p class="pull">We help crew find their next seat on the ground.</p>
         </div>
-        <p class="source">From our 2026 candidate survey.</p>
+        <figure class="who-img reveal">
+          <picture>
+            <source type="image/webp" srcset="img/boardroom-700.webp 700w, img/boardroom-1200.webp 1200w" sizes="(min-width: 900px) 32vw, 92vw">
+            <img src="img/boardroom-1200.jpg" srcset="img/boardroom-700.jpg 700w, img/boardroom-1200.jpg 1200w" sizes="(min-width: 900px) 32vw, 92vw" width="1200" height="751" loading="lazy" decoding="async" alt="Black and white photo of an empty boardroom at golden hour, with leather chairs along a polished marble table.">
+          </picture>
+          <figcaption>Fig. 02 &middot; The next seat</figcaption>
+        </figure>
       </div>
-      <figure class="who-img reveal">
-        <picture>
-          <source type="image/webp" srcset="img/boardroom-700.webp 700w, img/boardroom-1200.webp 1200w" sizes="(min-width: 900px) 42vw, 92vw">
-          <img src="img/boardroom-1200.jpg" srcset="img/boardroom-700.jpg 700w, img/boardroom-1200.jpg 1200w" sizes="(min-width: 900px) 42vw, 92vw" width="1200" height="751" loading="lazy" decoding="async" alt="Black and white photo of an empty boardroom at golden hour, with leather chairs along a polished marble table.">
-        </picture>
-      </figure>
+      <div class="stats reveal">
+        <div class="stat"><b>20+</b><span>Languages spoken</span></div>
+        <div class="stat"><b>58%</b><span>Have flown for 5+&nbsp;years</span></div>
+        <div class="stat"><b>85%</b><span>Ready to start within two months</span></div>
+      </div>
+      <p class="source">From our 2026 candidate survey.</p>
     </div>
   </section>
 
-  <!-- Why ex-crew -->
-  <section class="section" id="why" aria-labelledby="why-title">
+  <!-- 4. Why ex-crew -->
+  <section class="section light" id="why" aria-labelledby="why-title">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">Why ex-crew</span>
-        <div class="sec-head-body">
-          <h2 id="why-title">The skills you hire for, already proven in the air.</h2>
-          <p class="lede">Most of what makes someone great in a client-facing role is hard to test at interview. Cabin crew have practised it on every flight.</p>
-        </div>
+      <div class="runhead"><span>No. 03</span><span>Why ex-crew</span><span>The comparison</span></div>
+      <div class="why-head reveal">
+        <h2 class="display" id="why-title">The skills you hire for, already proven in the&nbsp;air.</h2>
+        <p class="lede">Most of what makes someone great in a client-facing role is hard to test at interview. Cabin crew have practised it on every flight.</p>
       </div>
-      <table class="compare reveal">
+      <table class="spread reveal">
         <caption class="sr-only">A typical hire compared with an ex-crew hire</caption>
         <thead>
-          <tr><td></td><th scope="col">A typical hire</th><th scope="col" class="ex">An ex-crew hire</th></tr>
+          <tr><td class="col-label"></td><th scope="col" class="typ"><span class="k">Left page</span>A typical hire</th><th scope="col" class="ex"><span class="k">Right page</span>An ex-crew hire</th></tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">Composure</th>
-            <td data-label="A typical hire">Hard to judge until something goes wrong.</td>
+            <td class="typ" data-label="A typical hire">Hard to judge until something goes wrong.</td>
             <td class="ex" data-label="An ex-crew hire">Requalifies every year in safety, first aid and emergency procedures. A difficult client or a missed deadline doesn't rattle them.</td>
           </tr>
           <tr>
             <th scope="row">Service</th>
-            <td data-label="A typical hire">Client care often learned on the job.</td>
+            <td class="typ" data-label="A typical hire">Client care often learned on the job.</td>
             <td class="ex" data-label="An ex-crew hire">Many have served First and Business Class guests and VIPs. Discretion and attention to detail are second nature.</td>
           </tr>
           <tr>
             <th scope="row">Global reach</th>
-            <td data-label="A typical hire">Often used to one market and one time zone.</td>
+            <td class="typ" data-label="A typical hire">Often used to one market and one time zone.</td>
             <td class="ex" data-label="An ex-crew hire">Has worked with dozens of nationalities, often in several languages, across shifting time zones.</td>
           </tr>
           <tr>
             <th scope="row">New teams</th>
-            <td data-label="A typical hire">Needs time to settle in.</td>
+            <td class="typ" data-label="A typical hire">Needs time to settle in.</td>
             <td class="ex" data-label="An ex-crew hire">Joins a brand-new crew on almost every flight. A new team is normal.</td>
           </tr>
           <tr>
             <th scope="row">Background</th>
-            <td data-label="A typical hire">One career, one setting.</td>
+            <td class="typ" data-label="A typical hire">One career, one setting.</td>
             <td class="ex" data-label="An ex-crew hire">Many had careers before flying, in law, nursing, teaching, hospitality, retail and tech.</td>
           </tr>
         </tbody>
@@ -415,34 +454,35 @@ button{font:inherit;color:inherit}
     </div>
   </section>
 
-  <!-- What we do -->
-  <section class="section" id="roles" aria-labelledby="roles-title">
+  <!-- 5. What we do -->
+  <section class="section light" id="roles" aria-labelledby="roles-title" style="padding-top:0">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">What we do</span>
-        <div class="sec-head-body">
-          <h2 id="roles-title">Four roles where ex-crew excel.</h2>
+      <div class="runhead"><span>No. 04</span><span>What we do</span><span>Contents</span></div>
+      <div class="grid roles-grid">
+        <div class="roles-intro reveal">
+          <h2 class="display" id="roles-title">Four roles where ex&#8209;crew excel.</h2>
           <p class="lede">Remote or hybrid with companies worldwide, or in the UK for crew with a UK background.</p>
         </div>
-      </div>
-      <div class="roles reveal">
-        <article class="role"><span class="num" aria-hidden="true">01</span><h3>Customer Success &amp; Account Management</h3><p>Onboarding, retention and renewals for SaaS, fintech and service businesses.</p></article>
-        <article class="role"><span class="num" aria-hidden="true">02</span><h3>Executive &amp; Personal Assistance</h3><p>Diary, travel and stakeholder management for founders and senior leaders.</p></article>
-        <article class="role"><span class="num" aria-hidden="true">03</span><h3>VIP &amp; Client Relations</h3><p>Concierge, luxury travel, private aviation and high-net-worth client service.</p></article>
-        <article class="role"><span class="num" aria-hidden="true">04</span><h3>Remote Operations</h3><p>Coordination, scheduling, onboarding and support in remote-first teams.</p></article>
+        <ol class="contents reveal">
+          <li><span class="num" aria-hidden="true">01</span><h3>Customer Success &amp; Account Management</h3><p>Onboarding, retention and renewals for SaaS, fintech and service businesses.</p></li>
+          <li><span class="num" aria-hidden="true">02</span><h3>Executive &amp; Personal Assistance</h3><p>Diary, travel and stakeholder management for founders and senior leaders.</p></li>
+          <li><span class="num" aria-hidden="true">03</span><h3>VIP &amp; Client Relations</h3><p>Concierge, luxury travel, private aviation and high-net-worth client service.</p></li>
+          <li><span class="num" aria-hidden="true">04</span><h3>Remote Operations</h3><p>Coordination, scheduling, onboarding and support in remote-first teams.</p></li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <!-- Founder -->
-  <section class="founder" id="founder" aria-label="A word from the founder">
+  <!-- 6. Founder -->
+  <section class="section dark founder" id="founder" aria-label="A word from the founder">
     <div class="wrap">
-      <div class="founder-inner reveal">
-        <img class="mark" src="img/mark-white.png" width="160" height="152" alt="" loading="lazy">
+      <div class="runhead"><span>No. 05</span><span>From the founder</span><span>In both seats</span></div>
+      <div class="grid founder-grid reveal">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
         <blockquote>
-          <p>&ldquo;I&rsquo;ve sat in both seats. Every candidate you meet has been interviewed by someone who has done the job.&rdquo;</p>
-          <cite>The founder, 1A Recruitment</cite>
+          <p>I&rsquo;ve sat in both seats. Every candidate you meet has been interviewed by someone who has done the job.</p>
         </blockquote>
+        <p class="byline"><img src="img/mark-white.png" width="160" height="152" alt="">The founder, 1A Recruitment</p>
         <details class="story">
           <summary><span class="when-closed">Read the founder story</span><span class="when-open">Close the founder story</span><span class="sign" aria-hidden="true"></span></summary>
           <div class="story-body">
@@ -456,30 +496,31 @@ button{font:inherit;color:inherit}
     </div>
   </section>
 
-  <!-- Talent pool -->
-  <section class="section" id="talent" aria-labelledby="talent-title">
+  <!-- 7. Talent pool -->
+  <section class="section light-2" id="talent" aria-labelledby="talent-title">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">Talent pool</span>
-        <div class="sec-head-body">
-          <h2 id="talent-title">A snapshot of who&rsquo;s ready to board.</h2>
-          <p class="lede">Every candidate is interviewed by someone who has worked as cabin crew, and references are checked. Profiles stay anonymous until you ask for an introduction.</p>
-        </div>
+      <div class="runhead"><span>No. 06</span><span>Talent pool</span><span>Examples</span></div>
+      <div class="grid talent-head reveal">
+        <h2 class="display" id="talent-title">A snapshot of who&rsquo;s ready to board.</h2>
+        <p class="lede">Every candidate is interviewed by someone who has worked as cabin crew, and references are checked. Profiles stay anonymous until you ask for an introduction.</p>
       </div>
       <div class="profiles reveal">
         <article class="pax" aria-label="Example profile: Senior Purser">
-          <div class="pax-top"><span class="tag">Example profile</span><span class="avail">Available now</span></div>
+          <span class="stamp">Example profile</span>
           <h3>Senior Purser</h3>
+          <p class="avail">Available now</p>
           <dl><dt>Flying</dt><dd>12+ years, long-haul</dd><dt>Before</dt><dd>Hospitality management</dd><dt>Languages</dt><dd>English, French</dd><dt>Seeking</dt><dd>Operations, onboarding</dd><dt>Based</dt><dd>UK, open to remote</dd></dl>
         </article>
         <article class="pax" aria-label="Example profile: First Class crew">
-          <div class="pax-top"><span class="tag">Example profile</span><span class="avail">1&ndash;2 months</span></div>
+          <span class="stamp">Example profile</span>
           <h3>First Class crew</h3>
+          <p class="avail">Available in 1&ndash;2 months</p>
           <dl><dt>Flying</dt><dd>6 years</dd><dt>Before</dt><dd>Luxury retail</dd><dt>Languages</dt><dd>English, Italian</dd><dt>Seeking</dt><dd>VIP client relations</dd><dt>Based</dt><dd>Remote, Europe</dd></dl>
         </article>
         <article class="pax" aria-label="Example profile: Business Class crew">
-          <div class="pax-top"><span class="tag">Example profile</span><span class="avail">Available now</span></div>
+          <span class="stamp">Example profile</span>
           <h3>Business Class crew</h3>
+          <p class="avail">Available now</p>
           <dl><dt>Flying</dt><dd>4 years</dd><dt>Before</dt><dd>Office administration</dd><dt>Languages</dt><dd>English, Spanish</dd><dt>Seeking</dt><dd>Customer success, EA</dd><dt>Based</dt><dd>London or remote</dd></dl>
         </article>
       </div>
@@ -487,14 +528,12 @@ button{font:inherit;color:inherit}
     </div>
   </section>
 
-  <!-- How we work -->
-  <section class="section" id="process" aria-labelledby="process-title">
+  <!-- 8. How we work -->
+  <section class="section light" id="process" aria-labelledby="process-title">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">How we work</span>
-        <div class="sec-head-body">
-          <h2 id="process-title">From brief to first day.</h2>
-        </div>
+      <div class="runhead"><span>No. 07</span><span>How we work</span><span>Four steps</span></div>
+      <div class="process-head reveal">
+        <h2 class="display" id="process-title">From brief to first&nbsp;day.</h2>
       </div>
       <ol class="steps reveal">
         <li><span class="num" aria-hidden="true">01</span><h3>Brief</h3><p>A 30-minute call about the role, your team and what great looks like.</p></li>
@@ -505,66 +544,59 @@ button{font:inherit;color:inherit}
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="section" id="pricing" aria-labelledby="pricing-title">
+  <!-- 9. Pricing -->
+  <section class="section dark" id="pricing" aria-labelledby="pricing-title">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">Pricing</span>
-        <div class="sec-head-body">
-          <h2 id="pricing-title">Pay only when you hire.</h2>
-          <p class="lede">One simple fee. No upfront costs and no retainers.</p>
-        </div>
-      </div>
-      <div class="price reveal">
-        <div class="price-main">
-          <p class="price-fig" aria-label="15 percent">15<span>%</span></p>
-          <p>of your hire&rsquo;s first-year base salary, paid only when they sign.</p>
+      <div class="runhead"><span>No. 08</span><span>Pricing</span><span>One fee</span></div>
+      <div class="grid price-grid reveal">
+        <p class="price-fig" aria-hidden="true">15<span>%</span></p>
+        <div class="price-side">
+          <h2 class="display" id="pricing-title">Pay only when you&nbsp;hire.</h2>
+          <p class="lede"><span class="sr-only">15% </span>Of your hire&rsquo;s first-year base salary, paid only when they sign.</p>
+          <ul class="price-list">
+            <li><b>Upfront</b><span>No upfront costs. Briefing us and seeing profiles costs nothing.</span></li>
+            <li><b>Retainers</b><span>None. You pay once, when your hire signs.</span></li>
+            <li><b>Guarantee</b><span>If your hire leaves within 90 days, we find a replacement at no extra cost.</span></li>
+            <li><b>Candidates</b><span>Never pay. Joining is always free for crew.</span></li>
+          </ul>
           <a class="btn btn-solid" href="#contact" data-book>Book a free call</a>
         </div>
-        <ul class="price-list">
-          <li><b>No upfront costs</b><span>Briefing us and seeing profiles costs nothing.</span></li>
-          <li><b>No retainers</b><span>You pay once, when your hire signs.</span></li>
-          <li><b>90-day guarantee</b><span>If your hire leaves within 90 days, we find a replacement at no extra cost.</span></li>
-          <li><b>Free for candidates</b><span>Crew never pay to join or to be placed.</span></li>
-        </ul>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section" id="faq" aria-labelledby="faq-title">
+  <!-- 10. FAQ -->
+  <section class="section light" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">FAQ</span>
-        <div class="sec-head-body">
-          <h2 id="faq-title">Questions, answered.</h2>
+      <div class="runhead"><span>No. 09</span><span>FAQ</span><span>Questions</span></div>
+      <div class="grid faq-grid">
+        <div class="faq-intro reveal">
+          <h2 class="display" id="faq-title">Questions, answered.</h2>
+          <p class="body-copy">Anything else? Email <a href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a>.</p>
         </div>
-      </div>
-      <div class="sec-head" style="margin-bottom:0">
-        <span aria-hidden="true"></span>
         <div class="faq">
           <details>
-            <summary>What does it cost to hire through 1A&nbsp;Recruitment?<span class="sign" aria-hidden="true"></span></summary>
+            <summary><span class="q-num">Q.01</span><span class="q">What does it cost to hire through 1A&nbsp;Recruitment?</span><span class="sign" aria-hidden="true"></span></summary>
             <div class="answer"><p>Nothing until you hire. Our fee is 15% of your hire&rsquo;s first-year base salary, paid only when they sign. There are no upfront costs and no retainers.</p></div>
           </details>
           <details>
-            <summary>What if a hire doesn&rsquo;t work out?<span class="sign" aria-hidden="true"></span></summary>
+            <summary><span class="q-num">Q.02</span><span class="q">What if a hire doesn&rsquo;t work out?</span><span class="sign" aria-hidden="true"></span></summary>
             <div class="answer"><p>If your hire leaves within 90 days, we find a replacement at no extra cost.</p></div>
           </details>
           <details>
-            <summary>How do you vet candidates?<span class="sign" aria-hidden="true"></span></summary>
+            <summary><span class="q-num">Q.03</span><span class="q">How do you vet candidates?</span><span class="sign" aria-hidden="true"></span></summary>
             <div class="answer"><p>Every candidate is interviewed by someone who has worked as cabin crew, so we know what good looks like. References are checked before you see a profile.</p></div>
           </details>
           <details>
-            <summary>Do candidates have corporate experience?<span class="sign" aria-hidden="true"></span></summary>
+            <summary><span class="q-num">Q.04</span><span class="q">Do candidates have corporate experience?</span><span class="sign" aria-hidden="true"></span></summary>
             <div class="answer"><p>Many do. A lot of crew had careers before flying, in fields like law, nursing, teaching, hospitality, retail and tech. Each profile shows what someone did before flying as well as during it.</p></div>
           </details>
           <details>
-            <summary>Which roles do you cover?<span class="sign" aria-hidden="true"></span></summary>
+            <summary><span class="q-num">Q.05</span><span class="q">Which roles do you cover?</span><span class="sign" aria-hidden="true"></span></summary>
             <div class="answer"><p>Customer success and account management, executive and personal assistance, VIP and client relations, and remote operations. Roles can be remote or hybrid with companies worldwide, or in the UK for crew with a UK background.</p><p>If you have a client-facing role that isn&rsquo;t listed, ask us.</p></div>
           </details>
           <details id="crew">
-            <summary>I&rsquo;m former cabin crew. How do I join?<span class="sign" aria-hidden="true"></span></summary>
+            <summary><span class="q-num">Q.06</span><span class="q">I&rsquo;m former cabin crew. How do I join?</span><span class="sign" aria-hidden="true"></span></summary>
             <div class="answer">
               <p>Email us at <a href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a> with a few lines about your flying, what you did before, and what you&rsquo;d like to do next. We&rsquo;ll reply within two working days.</p>
               <p>Joining is always free. Your details are never shared with an employer without your permission.</p>
@@ -576,35 +608,38 @@ button{font:inherit;color:inherit}
     </div>
   </section>
 
-  <!-- Closing call to action -->
-  <section class="final" id="contact" aria-labelledby="contact-title">
+  <!-- 11. Closing call to action -->
+  <section class="final dark" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
-      <div class="final-inner reveal">
-        <span class="label plain">Get in touch</span>
-        <h2 id="contact-title">Hiring, or ready to land?</h2>
-        <div class="audiences">
-          <div><b>Hiring</b><p>Send us a line about the role. We&rsquo;ll set up a 30-minute brief.</p></div>
-          <div><b>Former crew</b><p>Tell us about your flying and what comes next. Joining is always free.</p></div>
-        </div>
-        <div class="email-row">
-          <a class="email" id="email" href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a>
-          <button class="btn btn-line btn-sm" id="copy" type="button">Copy email</button>
-          <a class="btn btn-solid btn-sm" href="#contact" data-book data-book-only hidden>Book a call</a>
-        </div>
-        <p class="reply">We reply within two working days.</p>
-        <p class="sr-only" id="copy-status" aria-live="polite"></p>
+      <div class="runhead"><span>No. 10</span><span>Get in touch</span><span>Final call</span></div>
+      <div class="final-head reveal">
+        <h2 class="display xl" id="contact-title">Hiring, or ready to land?</h2>
       </div>
+      <div class="audiences reveal">
+        <div><b>Hiring</b><p>Send us a line about the role. We&rsquo;ll set up a 30-minute brief.</p></div>
+        <div><b>Former crew</b><p>Tell us about your flying and what comes next. Joining is always free.</p></div>
+      </div>
+      <div class="email-row">
+        <a class="email" id="email" href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a>
+        <button class="btn btn-line btn-sm" id="copy" type="button">Copy email</button>
+        <a class="btn btn-solid btn-sm" href="#contact" data-book data-book-only hidden>Book a call</a>
+      </div>
+      <p class="reply">We reply within two working days.</p>
+      <p class="sr-only" id="copy-status" aria-live="polite"></p>
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <div class="wrap foot">
-    <img class="logo" src="img/logo-white.png" width="700" height="458" alt="1A Recruitment, established 2026">
-    <p>A boutique recruitment consultancy placing former international cabin crew into corporate roles: remote, hybrid and in the UK.</p>
-    <div class="foot-meta">
-      <span>&copy; 2026 1A Recruitment. Independent UK recruitment consultancy. Not affiliated with any airline.</span>
-      <a href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a>
+<!-- 12. Footer -->
+<footer class="footer dark">
+  <div class="wrap">
+    <div class="foot">
+      <img class="logo" src="img/logo-white.png" width="700" height="458" alt="1A Recruitment, established 2026">
+      <p>A boutique recruitment consultancy placing former international cabin crew into corporate roles: remote, hybrid and in the UK.</p>
+      <div class="foot-meta">
+        <span>&copy; 2026 1A Recruitment. Independent UK recruitment consultancy. Not affiliated with any airline.</span>
+        <a href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a>
+      </div>
     </div>
   </div>
 </footer>
