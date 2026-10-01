@@ -238,7 +238,9 @@ details[open] > summary .sign::after{transform:rotate(0)}
 /* ---------- Closing call to action ---------- */
 .final{padding-block:var(--section)}
 .final-inner{display:grid;justify-items:center;text-align:center;gap:26px}
-.final h2{font-size:clamp(2.2rem,4.6vw,3.6rem)}
+.final h2{font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1.15}
+.final-lines{display:grid;gap:14px}
+.final-lines .lede{max-width:62ch}
 .email-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 24px;margin-top:14px}
 .email{font-family:var(--serif);font-size:clamp(1.35rem,3vw,2rem);text-decoration:none;padding-bottom:6px;border-bottom:1px solid var(--line-2);overflow-wrap:anywhere;transition:border-color .4s}
 .email:hover{border-color:var(--fg)}
@@ -510,8 +512,11 @@ details[open] > summary .sign::after{transform:rotate(0)}
     <div class="wrap">
       <div class="final-inner reveal">
         <span class="label">Get in touch</span>
-        <h2 id="contact-title">Hiring, or ready to land?</h2>
-        <p class="lede">Hiring? Send us a line about the role. Former crew? Send us your CV and a few lines about your experience.</p>
+        <h2 id="contact-title">Hiring,<br> or ready to land?</h2>
+        <div class="final-lines">
+          <p class="lede">Hiring? Send us a line about the role.</p>
+          <p class="lede">Former crew? Send us your CV and a few lines about your experience.</p>
+        </div>
         <div class="email-row">
           <a class="email" id="email" href="mailto:hello@1arecruitment.com">hello@1arecruitment.com</a>
           <button class="btn btn-sm" id="copy" type="button">Copy email</button>
